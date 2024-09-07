@@ -1,0 +1,24 @@
+.comment_child {
+	display: flex;
+	min-height: 80px;
+	margin-bottom:12px;
+}
+.img-container {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-right:12px;
+}
+.img-container img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.comment-body {
+/*	font-size: .9rem;*/
+	background: #eee;
+	border-radius: 6px;
+	padding:4px 12px 4px 12px;
+	width:100%;
+}

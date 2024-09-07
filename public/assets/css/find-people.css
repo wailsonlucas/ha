@@ -1,0 +1,38 @@
+.listed-users-container {
+	width:70%;
+}
+.listed-user {
+	display: flex;
+	align-items: center;
+	margin:12px;
+	border-radius: 6px;
+	background: #eee;
+	width:100%;
+	height: 100px;
+	padding:10px;
+	line-height: 25px;
+	cursor: pointer;
+}
+.listed-user .img-container {
+	height: 60px;
+	border:1px solid lightgrey;
+	width: 60px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.listed-user .img-container img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.listed-user p {
+	margin:0;
+}
+.user-name {
+	color:#000;
+}
+.listed-user .email,
+.listed-user .dofb {
+	font-size: .8rem;
+	color:grey;
+}
