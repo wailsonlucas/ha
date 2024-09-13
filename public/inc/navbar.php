@@ -107,8 +107,8 @@
                             </form>
                          
                             <li class="nav-item s-nav dropdown message-drop-li">
-                                <a href="#" class="nav-link nav-links message-drop drop-w-tooltip" data-toggle="dropdown" data-placement="bottom" data-title="Messages" role="button" aria-haspopup="true" aria-expanded="false">
-                                    <img src="assets/images/icons/navbar/message.png" class="message-dropdown" alt="navbar icon"> <span class="badge badge-pill badge-primary">1</span>
+                                <a href="messages.php" class="nav-link nav-links message-drop drop-w-tooltip" data-toggle="dropdown" data-placement="bottom" data-title="Messages" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <img src="assets/images/icons/navbar/message.png" class="message-dropdown" alt="navbar icon"> <span class="badge badge-pill badge-primary">XX</span>
                                 </a>
                                 <ul class="dropdown-menu notify-drop dropdown-menu-right nav-drop shadow-sm">
                                     <div class="notify-drop-title">

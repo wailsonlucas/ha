@@ -74,7 +74,7 @@ include_once "../app/autoload.php";
                 $client_email
          ]);
 
-        // print_r($messages_db);
+        print_r($messages_db);
         echo json_encode([
             "target email"=> $messages_db
         ]);

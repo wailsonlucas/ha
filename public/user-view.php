@@ -8,7 +8,7 @@ include_once "../app/autoload.php";
 
 $email = $_SESSION['email'];
 $user_id = $_SESSION['user_id'];
-
+$user = "";
 $db = new Database();
 
 if(isset($_GET['uid'])) {
@@ -20,7 +20,7 @@ if(isset($_GET['uid'])) {
 
 $addFriendState = "";
         
-$inv_exist_check = $db->GetRows("SELECT * FROM invitations WHERE sender_id = ? AND recipient_id = ?", [$_SESSION['email'], $user["email"]]);
+$inv_exist_check = $db->GetRow("SELECT * FROM invitations WHERE sender_id = ? AND recipient_id = ?", [$_SESSION['email'], $user["email"]]);
 
 if($inv_exist_check) {
     $addFriendState = "Request is sent...";
@@ -83,7 +83,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <div class="content">
                 <input type="number" name="Amount of money to send...">
-                <button id="send">Send</button>
+                <form action="create-payment.php" method="POST">
+                    <button id="send">Send</button>
+                </form>
                 <button id="closeDialog">Close</button>
             </div>
         </div>
@@ -113,7 +115,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             <p class="profile-fullname mt-3"><?= $user['first_name'] . " " . $user['last_name']; ?></p>
 
 
-                        <form action="" method="post" enctype="multipart/form-data">
+                        <form action="create-payment.php" method="post" enctype="multipart/form-data">
                             <input type="file" name="file" id="file">
                             <button type="submit" class="btn btn-sm btn-info" name="upload_profile">Upload</button>
                             <button id="send-money-button" >Send Money</button>
